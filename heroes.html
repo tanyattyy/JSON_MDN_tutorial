@@ -22,7 +22,7 @@
 <script>
     const header = document.querySelector('header');
     const section = document.querySelector('section');
-
+    console.log("The JavaScript code has executed!!!");
     // **** 1. retrieve the JSON data and convert it into a JavaScript object
     // a variable to store the URL of the JSON that we want to retrieve
     let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
@@ -45,9 +45,9 @@
     }
 
 
-    function populateHeader(json0bj) { // We named the parameter jsonObj, to remind ourselves that this JavaScript object originated from JSON
+    function populateHeader(jsonObj) { // We named the parameter jsonObj, to remind ourselves that this JavaScript object originated from JSON
         const myH1 = document.createElement('h1');
-        myH1.textContent = json0bj['squadName'];
+        myH1.textContent = jsonObj['squadName'];
         header.appendChild(myH1);
 
         const myPara = document.createElement('p');
